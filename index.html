@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanh Ẩn - Ma Sói</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Thẻ âm thanh sói hú dự phòng trực tiếp trên HTML giúp mobile không bị chặn -->
+    <audio id="wolfAudio" preload="auto">
+        <source src="https://actions.google.com/sounds/v1/animals/wolf_howling.ogg" type="audio/ogg">
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_12d26f63a2.mp3?filename=wolf-howl-10255.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hiệu ứng hạt sáng và chòm sao bay nền -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Màn hình mở đầu -->
+    <div id="welcome-screen" class="screen active">
+        <div class="hanging-moon">🌕</div>
+        <div class="moon-glow-container">
+            <div class="glow-ring"></div>
+            <div class="wolf-logo">🐺</div>
+        </div>
+        
+        <div class="box-title">NANH ẨN</div>
+        <div class="main-title">Bạn là ai trong đêm nay?</div>
+        <div class="sub-desc">Khám phá thế giới Ma Sói với hướng dẫn đầy đủ về luật chơi, nhân vật và chiến thuật sinh tồn.</div>
+        <button class="btn-start" id="start-btn">BẮT ĐẦU</button>
+    </div>
+
+    <!-- Màn hình Menu chính -->
+    <div id="menu-screen" class="screen">
+        <div class="menu-header-wrapper">
+            <button class="btn-back-home" id="back-home-btn">⬅ Trang Chủ</button>
+            <div class="menu-header">HỆ THỐNG NANH ẨN</div>
+        </div>
+        <div class="menu-list">
+            <div class="menu-item" data-target="intro-content">Giới Thiệu <span>📖</span></div>
+            <div class="menu-item" data-target="rules-content">Luật Chơi <span>📜</span></div>
+            <div class="menu-item" data-target="village-content">Phe Dân <span>🛡️</span></div>
+            <div class="menu-item" data-target="wolf-content">Phe Sói <span>🐺</span></div>
+            <div class="menu-item" data-target="third-content">Phe 3 <span>🔮</span></div>
+        </div>
+    </div>
+
+    <!-- Màn hình hiển thị nội dung chi tiết -->
+    <div id="content-screen" class="screen">
+        <div class="content-header">
+            <button class="btn-back" id="back-btn">⬅ Quay lại</button>
+            <span id="content-title">Tiêu Đề</span>
+        </div>
+        <div class="content-body" id="content-box">
+            <!-- Nội dung sẽ được nạp tự động ở đây -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
