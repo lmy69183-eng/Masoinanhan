@@ -7,10 +7,12 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start; /* Sửa thành flex-start để nội dung bắt đầu từ phía trên xuống */
+    padding-top: 20px;       /* Tạo khoảng cách an toàn phía trên so với viền màn hình điện thoại */
+    overflow-x: hidden;      /* Chỉ ẩn tràn ngang, cho phép cuộn dọc nếu nội dung dài */
     position: relative;
 }
+
 
 /* Hiệu ứng trăng treo lắc lư */
 .hanging-moon {
